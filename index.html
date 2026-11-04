@@ -1,14 +1,47 @@
 <!DOCTYPE html>
+nl lang='en'>
+ad>
+
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Me</title>
         <img src="images/my-image.jpg" alt="flowers in a banner" width="1200" height="200">
-        <style>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Side by Side Images</title>
+            <style>
             body {background-color: rgb(254, 250, 224);}
             h1 {color:rgb(173, 193, 120);}
             p {color:rgb(108, 88, 76);}
+
+           
+
+            /* The container that holds both images */
+            .image-container {
+                display: flex;      /* Aligns items horizontally */
+                gap: 15px;          /* Adds space between the images */
+                width: 100%;        /* Spans the full width of the page */
+            }
+    
+            /* Styling for the individual images */
+            .image-container img {
+                flex: 1;            /* Forces both images to take up equal width */
+                width: 100%;        /* Ensures image fills its flex space */
+                max-width: 100%;    /* Prevents bleeding out of bounds */
+                height: auto;       /* Keeps the original aspect ratio */
+                object-fit: cover;  /* Crops evenly if images have different heights */
+            }
+        
+            /* Mobile Responsive View */
+            @media (max-width: 600px) {
+                .image-container {
+                    flex-direction: column; /* Stacks images vertically on mobile */
+                }
+            
+            }
         </style>
     </head>
     <body>
@@ -19,15 +52,23 @@
         <p>
            I am studying to become a medical illustrator in neurosurgery.
         </p>
-        <img src="images/neuro-illust.jpg" alt="brain drawing" width="736" height="981">
+        <img src="images/neuro-illust.jpg" alt="brain drawing" width="368" height="490.5">
         <p>
-           I have a dog named Winston and a cat named Vivienne
+           I have a dog named Winston that is 7 years old and a kitten named Vivienne that is 6 months old.
         </p>
+    <div class="image-container">
+        <img src="images/winston-and-vivienne.jpg" alt="dog and cat">
+        <img src="images/vivienne-and-winston.jpg" alt="cat and dog">
+    </div>
         <p>
-            I like to create art in all mediums
+            I like to create art in all mediums. These two pieces I made in highschool. One is a mastercopy of Henry Ossawa Tanner's "The Thankful Poor" done in oil pastel. The other is a self portrait in acrylic.
         </p>
+    
+    <div class="image-container">
+        <img src="images/master-copy.jpg" alt="copy of a famus painting">
+        <img src="images/Self-Portrait.pdf" alt="painting of myself">
+    </div>
 
-        
         <ul>
             <li>1
                 <ul>
