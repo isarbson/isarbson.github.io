@@ -25,13 +25,13 @@
             .image-container img {
                 flex: 1;            /* Forces both images to take up equal width */
                 width: 100%;        /* Ensures image fills its flex space */
-                max-width: 100%;    /* Prevents bleeding out of bounds */
+                max-width: 50%;    /* Prevents bleeding out of bounds */
                 height: auto;       /* Keeps the original aspect ratio */
                 object-fit: cover;  /* Crops evenly if images have different heights */
             }
         
             /* Mobile Responsive View */
-            @media (max-width: 600px) {
+            @media (max-width: 500px) {
                 .image-container {
                     flex-direction: column; /* Stacks images vertically on mobile */
                 }
